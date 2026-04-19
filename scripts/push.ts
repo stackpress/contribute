@@ -138,20 +138,19 @@ async function main() {
     });
   }
 
-  system(`Staging changes`);
-  await run('git', [ 'add', '*' ], target, { dryRun });
-
-  system(`Committing version bump if needed`);
-  await run(
-    'git',
-    [ 'commit', '-m', '"version bump"' ],
-    target,
-    { dryRun }
-  );
-
   if (noPush) {
     system(`Skipping git push (--no-push)`);
   } else {
+    system(`Staging changes`);
+    await run('git', [ 'add', '*' ], target, { dryRun });
+
+    system(`Committing version bump if needed`);
+    await run(
+      'git',
+      [ 'commit', '-m', '"version bump"' ],
+      target,
+      { dryRun }
+    );
     system(`Pushing to GitHub`);
     await run('git', [ 'push' ], target, { dryRun });
   }
