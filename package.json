@@ -91,7 +91,19 @@
         "./templates/store",
         "./templates/website"
       ],
-      "publish": [ "./stackpress" ]
+      "publish": [ 
+        "./packages/stackpress-server",
+        "./packages/stackpress-schema",
+        "./packages/stackpress-language",
+        "./packages/stackpress-sql",
+        "./packages/stackpress-view",
+        "./packages/stackpress-csrf",
+        "./packages/stackpress-session",
+        "./packages/stackpress-email",
+        "./packages/stackpress-api",
+        "./packages/stackpress-admin",
+        "./packages/stackpress" 
+      ]
     },
     "frui": {
       "repository": "https://github.com/OSSPhilippines/frui.git",
