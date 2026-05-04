@@ -134,6 +134,7 @@
     "clone": "yarn tsenv tsx scripts/clone.ts",
     "connect": "yarn tsenv tsx scripts/connect.ts",
     "modules": "yarn tsenv tsx scripts/modules.ts",
+    "delete": "yarn tsenv tsx scripts/delete.ts",
     "pull": "yarn tsenv tsx scripts/pull.ts",
     "push": "yarn tsenv tsx scripts/push.ts",
     "sync": "yarn tsenv tsx scripts/sync.ts",
